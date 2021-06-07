@@ -1,18 +1,16 @@
 #include <stdio.h>
 int main()
 {
-    int  num, a, i ;
-    float series=0.0, sum = 1.0,f;
+    int  num, i ;
+    float series=0, sum = 1;
     for (i=1; i<=7;i++)
     {
-        a=i;
-        num=a-1;
-        while(num>=1)
+        
+       
+        for(num=i;num>=1;num--)
         {
-            f = num * a;
-            sum = sum * f;
-            a = a - 2;
-            num = num - 2;
+           
+            sum = sum * num;
         }
        series=series+i/sum;
        
