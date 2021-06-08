@@ -4,23 +4,20 @@ int main()
     int n, i;
     for (i = 1; i <= 300; i++)
     {
-        n = i;
-        if (i == 2)
-        {
-            printf(" %d \n", i);
-        }
+       
+        
+       n=1;     
+        
 
-        while (n-- >= 2)
+        while (n++<i)
         {
             if (i % n == 0)
-            {
-                break;
-            }
-            else if (n == 2)
-            {
-                printf(" %d \n", i);
-            }
-        }
+            
+              break;  
+            
+         }
+      if(n==i)
+       printf("%d",i);
     }
     return 0;
 }
