@@ -1,17 +1,22 @@
 #include <stdio.h>
 int main()
 {
-    int i;
-    float series = 0, sum = 1, n;
-    for (i = 1; i <= 7; i++)
+    int  num, a, i ;
+    float series=0.0, sum = 1.0,f;
+    for (i=1; i<=7;i++)
     {
-        for (n = i; n >= 1; n--)
+        a=i;
+        num=a-1;
+        while(num>=1)
         {
-            sum = sum * n;
+            f = num * a;
+            sum = sum * f;
+            a = a - 2;
+            num = num - 2;
         }
-        series = series + i / sum;
-        sum = 1;
+       series=series+i/sum;
+       
     }
-    printf("Sum of the Series is %f\n", series);
+    printf("Sum of the Series is %f\n",series);
     return 0;
 }

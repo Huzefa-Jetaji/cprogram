@@ -1,17 +1,27 @@
 #include <stdio.h>
 int main()
 {
-    int n, i;
+    int num, i;
     for (i = 1; i <= 300; i++)
-    {  
-       n=1;     
-        while (n++<i)
+    {
+        num = i-1 ;
+        if (i == 2)
         {
-            if (i % n == 0)
-              break;  
-         }
-      if(n==i)
-       printf("%d",i);
+            printf(" %d \n", i);
+        }
+        while (num >= 2)
+        {
+            if (i % num == 0)
+            {
+                break;
+            }
+            else if (num == 2)
+            {
+                printf(" %d \n", i);
+            }
+            
+            num--;
+        }
     }
     return 0;
 }
