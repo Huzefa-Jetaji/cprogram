@@ -1,16 +1,15 @@
 #include<stdio.h>
-int main(){
-    int f1,num,sum=1,i;
-    printf("Enter any number.\n");
-    scanf("%d",&num);
-    i=num-1;
-    while (i>=1)
+double factorial(int n){
+    double f=1;
+    for (int i = 1; i <=n; i++)
     {
-        f1=num*i;
-        sum=sum*f1;
-        num=num-2;
-        i=i-2;
+        f=f*i;
     }
-    printf("Factorial : %d\n",sum);
-    return 0;
-}
+    return (f);
+    }
+    int main(){
+        int n;
+        printf("Enter a number.\n");
+        scanf("%d",&n);
+        printf("Factorial : %lf",factorial(n));
+    }
